@@ -1,0 +1,14 @@
+{
+  "domain": "mitipi_kevin",
+  "name": "Mitipi Kevin",
+  "codeowners": [
+    "@vasyl127"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/teamvoydev/mitipi-kevin",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/teamvoydev/mitipi-kevin/issues",
+  "requirements": [],
+  "version": "0.6.2"
+}

@@ -1,0 +1,103 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Mitipi Kevin",
+        "description": "Sign in with your Mitipi account. The integration talks only to the Kevin API.",
+        "data": {
+          "email": "Email",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate Mitipi Kevin",
+        "description": "Your Kevin API credentials are no longer valid. Enter your email and password again.",
+        "data": {
+          "email": "Email",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid email or password.",
+      "cannot_connect": "Could not reach the Kevin API. Try again later.",
+      "unknown": "Unexpected error. Check the logs."
+    },
+    "abort": {
+      "already_configured": "This account is already configured.",
+      "reauth_successful": "Re-authentication succeeded."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "mode": {
+        "name": "Mode"
+      },
+      "firmware": {
+        "name": "Firmware"
+      },
+      "activity": {
+        "name": "Now playing"
+      },
+      "schedule": {
+        "name": "Schedule"
+      },
+      "account_subscription": {
+        "name": "Subscription"
+      },
+      "preferences": {
+        "name": "Preferences"
+      }
+    },
+    "binary_sensor": {
+      "connectivity": {
+        "name": "Connectivity"
+      }
+    },
+    "switch": {
+      "power": {
+        "name": "Power"
+      }
+    },
+    "select": {
+      "scene": {
+        "name": "Scene"
+      }
+    },
+    "button": {
+      "reboot": {
+        "name": "Reboot"
+      }
+    }
+  },
+  "services": {
+    "set_preferences": {
+      "name": "Set preferences",
+      "description": "Change where KEVIN lives, who lives there, and how busy and lively it is. Mirrors the Mitipi app: a fresh preset recommendation is generated and the full selection is saved.",
+      "fields": {
+        "environment": {
+          "name": "Environment",
+          "description": "HOME, BUSINESS or INDUSTRIAL. Switching resets lifestyle toggles that do not exist in the new environment."
+        },
+        "characteristics": {
+          "name": "Lifestyle",
+          "description": "Toggles for the environment, for example {\"kids\": true, \"dogs\": false}."
+        },
+        "occupancy_level": {
+          "name": "Occupancy",
+          "description": "How many people are usually around, 0 to 10."
+        },
+        "energy_level": {
+          "name": "Energy",
+          "description": "How lively the place is, 0 to 10."
+        }
+      }
+    }
+  },
+  "issues": {
+    "update_available": {
+      "title": "Mitipi Kevin {latest} is available",
+      "description": "You have Mitipi Kevin {installed}. Version {latest} is out, but HACS could not be asked to show it. Open HACS, choose Mitipi Kevin → Update information, then install the update and restart Home Assistant."
+    }
+  }
+}
