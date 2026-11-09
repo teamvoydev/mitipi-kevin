@@ -11,5 +11,5 @@ tests/test_environment.py keeps them consistent.
 """
 
 ENVIRONMENT = "production"
-KEVIN_API_BASE_URL = "https://mitipi-api.teamvoy.com/api"
+KEVIN_API_BASE_URL = "https://platform.kevinswiss.com/api"
 GITHUB_REPOSITORY = "teamvoydev/mitipi-kevin"

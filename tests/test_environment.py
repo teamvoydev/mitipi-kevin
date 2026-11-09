@@ -20,7 +20,7 @@ TARGETS = {
         "name": "Mitipi Kevin (Stage)",
     },
     "production": {
-        "api": "https://mitipi-api.teamvoy.com/api",
+        "api": "https://platform.kevinswiss.com/api",
         "repository": "teamvoydev/mitipi-kevin",
         "name": "Mitipi Kevin",
     },

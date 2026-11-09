@@ -2,7 +2,7 @@
 
 # Mitipi Kevin for Home Assistant (HACS)
 
-> **Production build.** This repository talks to the production Kevin API (`https://mitipi-api.teamvoy.com/api`).
+> **Production build.** This repository talks to the production Kevin API (`https://platform.kevinswiss.com/api`).
 
 Production-oriented custom integration that connects Home Assistant to **Mitipi Kevin** through the Kevin HTTP API only. Home Assistant never talks to Auth0, Cognito, AWS Lambda, MQTT, or legacy AWS routes directly—credentials are exchanged once with `POST /v1/auth/login`, and all device traffic uses Bearer + `x-auth0-id-token` headers on Kevin API paths.
 
@@ -22,7 +22,7 @@ On Home Assistant 2026.3 and later, the integration also points the HACS update 
 
 ## Configuration flow
 
-All traffic uses the fixed Kevin API base URL of this build (`https://mitipi-api.teamvoy.com/api`, set in `custom_components/mitipi_kevin/environment.py`); the host is not user-configurable.
+All traffic uses the fixed Kevin API base URL of this build (`https://platform.kevinswiss.com/api`, set in `custom_components/mitipi_kevin/environment.py`); the host is not user-configurable.
 
 Adding the integration opens the **Sign in with Mitipi** page in a new browser tab. Sign in there with Google, Apple or your KEVIN® e-mail and password; the tab then returns to Home Assistant through My Home Assistant and the entry is created. Home Assistant stores the account's tokens (refreshed automatically) and never sees a password. This needs the `my` integration, which is part of `default_config`. Which of Google, Apple and e-mail the page offers is set on the Kevin API.
 
