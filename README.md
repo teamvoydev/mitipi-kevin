@@ -2,6 +2,9 @@
 
 # Mitipi Kevin for Home Assistant
 
+> [!IMPORTANT]
+> **This repository has moved to [kevin-mitipi/KEVIN](https://github.com/kevin-mitipi/KEVIN)** and is archived. The integration is now called **KEVIN®**. In the Marketplace (or HACS), remove this repository without removing the integration, add `https://github.com/kevin-mitipi/KEVIN` and install the latest release. Your KEVIN entry, devices and automations keep working.
+
 > **Production build.** This repository talks to the production Kevin API (`https://platform.kevinswiss.com/api`).
 
 Production-oriented custom integration that connects Home Assistant to **Mitipi Kevin** through the Kevin HTTP API only. Home Assistant never talks to Auth0, Cognito, AWS Lambda, MQTT, or legacy AWS routes directly—credentials are exchanged once with `POST /v1/auth/login`, and all device traffic uses Bearer + `x-auth0-id-token` headers on Kevin API paths.
